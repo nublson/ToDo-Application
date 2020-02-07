@@ -7,7 +7,8 @@ export default {
 		primary_highlight: '#C3E8BD',
 		background: '#fff',
 
-		text: '#D0CFCF'
+		text: '#575757',
+		text_input: '#D0CFCF'
 	},
 
 	mediaQueries

@@ -23,6 +23,7 @@ export default createGlobalStyle`
         --primary-light: ${props => props.theme.colors.primary_light};
         --primary-highlight: ${props => props.theme.colors.primary_highlight};
         --text: ${props => props.theme.colors.text};
+        --text-input: ${props => props.theme.colors.text_input};
         --background: ${props => props.theme.colors.background};
         --white: #fff;
         --radius: 1.5rem;
