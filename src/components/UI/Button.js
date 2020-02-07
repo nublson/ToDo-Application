@@ -21,5 +21,5 @@ export const AddButton = ({ state }) => {
 }
 
 export const RemoveButton = () => {
-	return <StyledIcon remove icon={faWindowClose} />
+	return <StyledIcon remove='true' icon={faWindowClose} />
 }
