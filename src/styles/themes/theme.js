@@ -8,6 +8,7 @@ export default {
 		background: '#fff',
 
 		text: '#575757',
+		text_highlight: '#EEF0F2',
 		text_input: '#D0CFCF'
 	},
 
