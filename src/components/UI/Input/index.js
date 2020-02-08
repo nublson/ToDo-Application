@@ -1,12 +1,15 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import { Formik } from 'formik'
 import * as Yup from 'yup'
+
+import { addTodo } from '../../../utils/redux/actions'
 
 import { Container, StyledForm, StyledField, StyledButton } from './styles'
 
 import { AddButton } from '../Button'
 
-const Input = () => {
+const Input = ({ dispatch }) => {
 	const validationSchema = Yup.object().shape({
 		todo: Yup.string().required()
 	})
@@ -16,7 +19,7 @@ const Input = () => {
 			initialValues={{ todo: '' }}
 			validationSchema={validationSchema}
 			onSubmit={({ todo }, actions) => {
-				console.log(todo)
+				dispatch(addTodo(todo))
 
 				actions.resetForm()
 			}}
@@ -43,4 +46,4 @@ const Input = () => {
 	)
 }
 
-export default Input
+export default connect(state => ({ todos: state }))(Input)

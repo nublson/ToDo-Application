@@ -1,18 +1,13 @@
-const todoDefaultState = [
-	{
-		id: 1,
-		content: 'Learn Redux',
-		amount: 3
-	},
-	{
-		id: 2,
-		content: 'Learn Typescript',
-		amount: 1
-	}
-]
+const todoDefaultState = []
 
-const todoReducer = (state = todoDefaultState) => {
-	return state
+const todoReducer = (state = todoDefaultState, action) => {
+	console.log(action)
+	switch (action.type) {
+		case 'ADD_TODO':
+			return [action.todo, ...state]
+		default:
+			return state
+	}
 }
 
 export default todoReducer

@@ -11,6 +11,7 @@ const Cards = ({ todos }) => {
 			{todos.map(todo => (
 				<Card
 					key={todo.id}
+					id={todo.id}
 					content={todo.content}
 					amount={todo.amount}
 				/>
