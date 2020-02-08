@@ -1,19 +1,23 @@
 import React from 'react'
+import { connect } from 'react-redux'
+
+import { removeTodo } from '../../../utils/redux/actions'
+
 import { Container, Todo, RightSection, StyledCount } from './styles'
 
 import { RemoveButton } from '../Button'
 
-const Card = ({ content, amount }) => {
+const Card = ({ id, content, amount, dispatch }) => {
 	return (
 		<Container>
 			<Todo>{content}</Todo>
 
 			<RightSection>
 				<StyledCount count={amount}>{amount}</StyledCount>
-				<RemoveButton />
+				<RemoveButton onClick={() => dispatch(removeTodo(id))} />
 			</RightSection>
 		</Container>
 	)
 }
 
-export default Card
+export default connect(state => ({ todos: state }))(Card)

@@ -20,6 +20,6 @@ export const AddButton = ({ state }) => {
 	return <StyledIcon state={state} icon={faPlusSquare} />
 }
 
-export const RemoveButton = () => {
-	return <StyledIcon remove='true' icon={faWindowClose} />
+export const RemoveButton = ({ onClick }) => {
+	return <StyledIcon onClick={onClick} remove='true' icon={faWindowClose} />
 }

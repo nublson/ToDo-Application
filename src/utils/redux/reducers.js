@@ -5,6 +5,10 @@ const todoReducer = (state = todoDefaultState, action) => {
 	switch (action.type) {
 		case 'ADD_TODO':
 			return [action.todo, ...state]
+		case 'REMOVE_TODO':
+			return state.filter(({ id }) => {
+				return id !== action.id
+			})
 		default:
 			return state
 	}
