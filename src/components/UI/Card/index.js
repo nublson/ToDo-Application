@@ -3,13 +3,13 @@ import { Container, Todo, RightSection, StyledCount } from './styles'
 
 import { RemoveButton } from '../Button'
 
-const Card = ({ todo, count }) => {
+const Card = ({ content, amount }) => {
 	return (
 		<Container>
-			<Todo>{todo}</Todo>
+			<Todo>{content}</Todo>
 
 			<RightSection>
-				<StyledCount count={count}>{count}</StyledCount>
+				<StyledCount count={amount}>{amount}</StyledCount>
 				<RemoveButton />
 			</RightSection>
 		</Container>
