@@ -1,6 +1,6 @@
 # To-Do Application
 
-![TODO Preview](./thumbnail.png)
+![TODO Preview](./thumbnailv2.png)
 
 This is a very simple to-do application made with React and Redux to train some knowledge in State management.
 It allows the creation and removal of to-dos, including the possibility to delete all to-dos at once.
