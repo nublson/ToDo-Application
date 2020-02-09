@@ -1,7 +1,6 @@
 const todoDefaultState = []
 
 const todoReducer = (state = todoDefaultState, action) => {
-	console.log(action)
 	switch (action.type) {
 		case 'ADD_TODO':
 			return [action.todo, ...state]
@@ -9,6 +8,8 @@ const todoReducer = (state = todoDefaultState, action) => {
 			return state.filter(({ id }) => {
 				return id !== action.id
 			})
+		case 'REMOVE_ALL':
+			return (state = [])
 		default:
 			return state
 	}

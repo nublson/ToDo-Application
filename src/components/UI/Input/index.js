@@ -7,7 +7,7 @@ import { addTodo } from '../../../utils/redux/actions'
 
 import { Container, StyledForm, StyledField, StyledButton } from './styles'
 
-import { AddButton } from '../Button'
+import { AddIcon } from '../Icons'
 
 const Input = ({ dispatch }) => {
 	const validationSchema = Yup.object().shape({
@@ -35,9 +35,7 @@ const Input = ({ dispatch }) => {
 						/>
 
 						<StyledButton type='submit'>
-							<AddButton
-								state={values.todo ? 'typing' : 'empty'}
-							/>
+							<AddIcon state={values.todo ? 'typing' : 'empty'} />
 						</StyledButton>
 					</StyledForm>
 				</Container>

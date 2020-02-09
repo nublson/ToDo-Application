@@ -5,7 +5,7 @@ import { removeTodo } from '../../../utils/redux/actions'
 
 import { Container, Todo, RightSection, StyledCount } from './styles'
 
-import { RemoveButton } from '../Button'
+import { RemoveIcon } from '../Icons'
 
 const Card = ({ id, content, amount, dispatch }) => {
 	return (
@@ -14,7 +14,7 @@ const Card = ({ id, content, amount, dispatch }) => {
 
 			<RightSection>
 				<StyledCount count={amount}>{amount}</StyledCount>
-				<RemoveButton onClick={() => dispatch(removeTodo(id))} />
+				<RemoveIcon onClick={() => dispatch(removeTodo(id))} />
 			</RightSection>
 		</Container>
 	)
