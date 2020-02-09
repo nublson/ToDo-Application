@@ -1,5 +1,5 @@
 import React from 'react'
-import { connect } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { Formik } from 'formik'
 import * as Yup from 'yup'
 
@@ -9,7 +9,9 @@ import { Container, StyledForm, StyledField, StyledButton } from './styles'
 
 import { AddIcon } from '../Icons'
 
-const Input = ({ dispatch }) => {
+const Input = () => {
+	const dispatch = useDispatch()
+
 	const validationSchema = Yup.object().shape({
 		todo: Yup.string().required()
 	})
@@ -44,4 +46,4 @@ const Input = ({ dispatch }) => {
 	)
 }
 
-export default connect(state => ({ todos: state }))(Input)
+export default Input

@@ -1,5 +1,5 @@
 import React from 'react'
-import { connect } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 
 import { removeAll } from '../../utils/redux/actions'
 
@@ -8,7 +8,10 @@ import { TrashIcon } from '../UI/Icons'
 
 import Card from '../UI/Card'
 
-const Cards = ({ todos, dispatch }) => {
+const Cards = () => {
+	const todos = useSelector(state => state)
+	const dispatch = useDispatch()
+
 	return (
 		<>
 			<RemoveAll
@@ -31,4 +34,4 @@ const Cards = ({ todos, dispatch }) => {
 	)
 }
 
-export default connect(state => ({ todos: state }))(Cards)
+export default Cards

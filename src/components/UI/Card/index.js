@@ -1,5 +1,5 @@
 import React from 'react'
-import { connect } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
 import { removeTodo } from '../../../utils/redux/actions'
 
@@ -7,7 +7,9 @@ import { Container, Todo, RightSection, StyledCount } from './styles'
 
 import { RemoveIcon } from '../Icons'
 
-const Card = ({ id, content, amount, dispatch }) => {
+const Card = ({ id, content, amount }) => {
+	const dispatch = useDispatch()
+
 	return (
 		<Container>
 			<Todo>{content}</Todo>
@@ -20,4 +22,4 @@ const Card = ({ id, content, amount, dispatch }) => {
 	)
 }
 
-export default connect(state => ({ todos: state }))(Card)
+export default Card
