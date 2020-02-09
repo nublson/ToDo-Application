@@ -1,4 +1,6 @@
-const todoDefaultState = []
+import { loadState } from '../localStore'
+
+const todoDefaultState = loadState()
 
 const todoReducer = (state = todoDefaultState, action) => {
 	switch (action.type) {
