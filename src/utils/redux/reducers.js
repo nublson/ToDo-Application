@@ -6,7 +6,10 @@ const todoReducer = (state = todoDefaultState, action) => {
 	switch (action.type) {
 		case 'ADD_TODO':
 			const newTodo = action.todo
-			const exists = state.find(todo => todo.content === newTodo.content)
+			const exists = state.find(
+				todo =>
+					todo.content.toUpperCase() === newTodo.content.toUpperCase()
+			)
 			if (exists) {
 				return state.map(todo => {
 					if (todo.id === exists.id) {
