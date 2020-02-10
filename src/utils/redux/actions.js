@@ -5,7 +5,7 @@ export const addTodo = (content = '') => {
 		type: 'ADD_TODO',
 		todo: {
 			id: uuid(),
-			content,
+			content: content.trim(),
 			amount: 1
 		}
 	}
