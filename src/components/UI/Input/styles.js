@@ -26,6 +26,10 @@ export const StyledField = styled(Field)`
 
 		font-weight: bold;
 	}
+
+	@media ${props => props.theme.mediaQueries.small} {
+		font-size: 1.8rem;
+	}
 `
 
 export const StyledButton = styled.button`

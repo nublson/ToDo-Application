@@ -31,5 +31,3 @@ const todoReducer = (state = todoDefaultState, action) => {
 }
 
 export default todoReducer
-
-// return [{ ...exists, amount: exists.amount + 1 }, ...state]

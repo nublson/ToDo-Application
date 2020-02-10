@@ -16,12 +16,26 @@ export const Container = styled.div`
 	&:hover {
 		transform: translateY(-0.5rem);
 	}
+
+	@media ${props => props.theme.mediaQueries.smallest} {
+		padding: 1.5rem;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 `
 
 export const Todo = styled.p`
 	font-size: 2rem;
 	font-weight: bold;
+	margin-right: 2rem;
 	color: var(--primary);
+
+	@media ${props => props.theme.mediaQueries.smallest} {
+		display: inline-block;
+		text-align: center;
+		margin: 0 0 1rem;
+	}
 `
 
 export const RightSection = styled.div`

@@ -12,4 +12,8 @@ export const Title = styled.h1`
 	text-transform: uppercase;
 	font-weight: bold;
 	color: var(--primary);
+
+	@media ${props => props.theme.mediaQueries.small} {
+		font-size: 5rem;
+	}
 `
